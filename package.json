@@ -1,0 +1,37 @@
+{
+  "name": "base-d3-chart",
+  "version": "0.1",
+  "description": "Base chart class for d3.  Factors out common functionality, making chart generation (slightly) simpler",
+  "main": "public/js/base-chart.js",
+  "scripts": {
+    "start": "http-server -p 8086 -c0",
+    "postinstall": "cp public/base-config.js public/config.js && jspm install --yes",
+    "bundle": "jspm bundle js/base-chart public/js/base-chart.bundle.js --inject --minify",
+    "clean": "rm -Rf dist/ public/js/base-chart.bundle.js public/config.js && jspm install --yes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:guygriffiths/base-d3-chart.git"
+  },
+  "keywords": [],
+  "author": "Guy Griffiths",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "jspm": "^0.16.48"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "public",
+      "packages": "public/lib"
+    },
+    "dependencies": {
+      "d3": "npm:d3@^4.9.1"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
