@@ -1,6 +1,6 @@
 {
   "name": "base-d3-chart",
-  "version": "0.1",
+  "version": "1.0",
   "description": "Base chart class for d3.  Factors out common functionality, making chart generation (slightly) simpler",
   "main": "public/js/base-chart.js",
   "scripts": {
