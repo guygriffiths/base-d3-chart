@@ -53,6 +53,8 @@ export default class BaseChart {
         this.height = this.svg.node().getBoundingClientRect().height -
             this.margin.top -
             this.margin.bottom
+        this.chartArea
+            .attr('transform', `translate(${this.margin.left},${this.margin.top})`)
     }
 
     _draw(resize = false) {
