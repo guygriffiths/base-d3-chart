@@ -1,6 +1,6 @@
 {
   "name": "base-d3-chart",
-  "version": "1.0",
+  "version": "1.1.0",
   "description": "Base chart class for d3.  Factors out common functionality, making chart generation (slightly) simpler",
   "main": "public/js/base-chart.js",
   "scripts": {
@@ -26,12 +26,17 @@
       "packages": "public/lib"
     },
     "dependencies": {
-      "d3": "npm:d3@4.9.1"
+      "d3": "npm:d3@^4.10.0"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
       "core-js": "npm:core-js@^1.1.4"
+    },
+    "overrides": {
+      "npm:d3@4.10.0": {
+        "main": "build/d3.js"
+      }
     }
   }
 }
